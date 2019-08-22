@@ -18,9 +18,11 @@ p {
 }
 
 h2 {
-    font-size: em(70);
+    font-size: em(45);
     font-family: "gilroy-Medium";
     margin-bottom: 90px;
+    z-index: 1;
+    position: relative;
 }
 
 .dp-btn {
@@ -30,12 +32,12 @@ h2 {
     font-family: "Gilroy-ExtraBold";
     color: $white;
     line-height: 29px;
-    padding: 13px;
-    min-width: 200px;
+    padding: 10px;
+    min-width: 180px;
     text-align: center;
     // border: 2px solid $white;
     @include primary-gradient;
-    @include transition;
+    transition: all ease-in-out 0.2s;
     position: relative;
     letter-spacing: 2px;
     cursor: pointer;
@@ -67,12 +69,12 @@ h2 {
 }
 
 // dp-prealoader
-#loader {
+#dp-loader {
     width: 100%;
     height: 100%;
     position: fixed;
     z-index: 1;
-    background: #f2f2f2;
+    background: #1C1D25;
     z-index: 3000;
 
     span {
@@ -142,12 +144,37 @@ h2 {
     height: auto;
 }
 
-// dp-particle
-canvas {
-    display: block;
-    vertical-align: bottom;
+// dp-stripe-bg
+
+.dp-stripe-bg {
+    display: inline-block;
+    position: relative;
+    color: $white;
+    padding: 10px 40px;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 25px;
+        right: 25px;
+        top: 0px;
+        bottom: 0px;
+        background-color: #26408B;
+        transform: rotate(2deg);
+        @include transition;
+    }
+
+    &::after {
+        background-color: #EF3636;
+        transform: rotate(0);
+        left: 0px;
+        right: 0px;
+    }
 }
 
+// dp-particle
 #dp-particles-js {
     position: absolute;
     width: 100%;
@@ -157,6 +184,10 @@ canvas {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
+
+    canvas {
+        display: block;
+    }
 }
 
 // dp-nav
@@ -355,15 +386,16 @@ nav {
 .dp-home-contant {
     position: absolute;
     top: 40%;
-    left: 0;
-    transform: translateY(-50%);
-    margin: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 20px 0;
+    text-align: center;
 }
 
 .profile-pic {
-    width: 295px;
-    height: 295px;
-    margin: 80px 0 15px 0;
+    width: 250px;
+    height: 250px;
+    margin: 80px auto 15px auto;
     border-radius: 50%;
     overflow: hidden;
 
@@ -379,6 +411,7 @@ nav {
         font-family: "Gilroy-ExtraBold";
         color: $white;
         line-height: 90px;
+        margin-bottom: 20px;
     }
 
     label {
@@ -477,7 +510,7 @@ nav {
 // dp-about
 .dp-about {
     background: $white;
-    padding: 150px 0;
+    padding: 80px 0;
 }
 
 .dp-about-contant {
@@ -501,9 +534,13 @@ nav {
 
 // sp-skill
 .dp-skill {
-    padding: 150px 0 100px 0;
+    padding: 80px 0 30px 0;
     @include primary-gradient;
     color: $white;
+
+    h2 {
+        margin-bottom: 70px;
+    }
 }
 
 .dp-skill-info {
@@ -543,7 +580,7 @@ nav {
 
 // dp-work
 .dp-work {
-    padding: 150px 0;
+    padding: 80px 0;
 }
 
 .dp-work,
@@ -562,13 +599,13 @@ nav {
     padding: 0 20px;
 
     .dp-work-info {
-        margin-bottom: 150px;
+        margin-bottom: 100px;
 
         .dp-work-link {
             text-decoration: none;
             display: block;
-            min-height: 500px;
-            max-width: 1000px;
+            min-height: 480px;
+            max-width: 930px;
             background-size: cover;
             background-position: top center;
             background-repeat: no-repeat;
@@ -654,7 +691,7 @@ nav {
     @include transition;
 
     h3 {
-        font-size: em(70);
+        font-size: em(50);
         font-family: "Gilroy-Bold";
         color: inherit;
         margin: 0 0 15px 0;
@@ -722,26 +759,10 @@ nav {
 
 // dp-testimonials
 .dp-testimonials {
-    padding: 100px 0;
+    padding: 50px 0 80px 0;
     position: relative;
     overflow: hidden;
     transition: all ease-in-out 0.5s;
-
-    &::before,
-    &::after {
-        content: url('../img/stripe-colors.svg');
-        position: absolute;
-        top: 10%;
-        left: -1000px;
-        transition: inherit;
-    }
-
-    &::after {
-        top: auto;
-        left: auto;
-        bottom: 10%;
-        right: -1000px;
-    }
 }
 
 
@@ -756,32 +777,19 @@ nav {
 }
 
 .dp-testimonial-text {
-    max-width: 890px;
+    max-width: 1100px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     position: relative;
-
-    &::after {
-        content: "";
-        background: url('../img/quote-icon.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 50%;
-        opacity: 0.3;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: -1;
-    }
 
     .dp-testimonial-pic {
         width: 150px;
         height: 150px;
         border-radius: 50%;
         overflow: hidden;
-        margin: 0 auto 40px auto;
+        position: absolute;
+        left: 0;
+        top: 0;
 
         img {
             max-width: 100%;
@@ -794,41 +802,36 @@ nav {
         font-family: "Gilroy-Medium";
         color: $black;
         position: relative;
-        padding: 70px 0;
+        padding: 55px 0 20px 0;
         text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 
         &::before {
             content: url('../img/quote-black.svg');
             position: absolute;
             top: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0%;
         }
     }
 
     label {
+        display: inline-block;
         position: relative;
         font-size: em(32);
         text-transform: uppercase;
-        font-family: "Gilroy-Bold";
-        padding: 40px 0;
+        font-family: "Gilroy-Regular";
+        background: $dark;
+        color: $white;
+        padding: 4px 8px;
+    }
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            min-width: 320px;
-            height: 1px;
-            background: $black;
-        }
+    .dp-testimonial-word {
+        padding-left: 200px;
     }
 }
 
 .dp-testimonials-slider .slick-dots {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 40px;
 
     li {
         display: inline-block;
@@ -858,7 +861,22 @@ nav {
 
 footer {
     background-color: $dark;
-    padding: 80px 0 0 0;
+    padding: 10px 0 0 0;
+    margin: 50px 0 0 0;
+    position: relative;
+    z-index: 1;
+    overflow: visible visible;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: $dark;
+        top: -40px;
+        left: 0;
+        width: 100%;
+        height: 85px;
+        transform: skewY(2deg);
+    }
 }
 
 .dp-footer-content {
@@ -992,10 +1010,25 @@ footer {
     }
 
     h3 {
-        font-size: em(35);
-        font-family: "Gilroy-ExtraBold";
+        font-size: em(32);
+        font-family: "Gilroy-Bold";
         margin-bottom: 15px;
         color: inherit;
+        position: relative;
+        z-index: 1;
+        letter-spacing: 4px;
+
+        span {
+            padding: 5px 15px;
+
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                transform: rotate(-2deg)
+            }
+        }
     }
 
     label {
@@ -1041,12 +1074,6 @@ footer {
 .dp-form-input {
     margin-bottom: 25px;
 
-    label {
-        font-size: em(14);
-        font-family: "Gilroy-SemiBold";
-        margin: 0;
-    }
-
     input,
     textarea {
         display: block;
@@ -1054,11 +1081,13 @@ footer {
         border: 0;
         border-bottom: 2px solid $white;
         background-color: $transparent;
-        padding: 5px 0;
-        color: $white;
-        font-family: "Gilroy-Regular";
+        padding: 10px;
+        font-family: "Gilroy-Medium";
         font-size: em(18);
         resize: none;
+        background-color: $white;
+        font-style: italic;
+        color: $dark;
 
         &:hover,
         &:focus,
@@ -1068,7 +1097,7 @@ footer {
     }
 
     input {
-        height: 40px;
+        height: 45px;
     }
 }
 
@@ -1089,6 +1118,10 @@ footer {
     h2 {
         font-size: em(40);
         margin-bottom: 40px;
+    }
+
+    .dp-stripe-bg {
+        padding: 5px 30px;
     }
 
     .dp-navbar {
@@ -1118,19 +1151,19 @@ footer {
     }
 
     .dp-about {
-        padding: 100px 0;
+        padding: 70px 0;
     }
 
     .dp-skill {
-        padding: 100px 0 50px 0;
+        padding: 70px 0 50px 0;
     }
 
     .dp-work {
-        padding: 100px 0;
+        padding: 70px 0;
     }
 
     .dp-testimonials {
-        padding: 80px 0;
+        padding: 70px 0;
     }
 
 
@@ -1165,10 +1198,6 @@ footer {
         margin-top: 40px;
     }
 
-    footer {
-        padding: 50px 0 0 0;
-    }
-
     .dp-footer-content {
         margin-top: 100px;
 
@@ -1189,9 +1218,13 @@ footer {
 
 @media(max-width: $sm) {
 
+    h2 {
+        font-size: em(26);
+    }
+
     .dp-btn {
-        padding: 10px;
-        min-width: 200px;
+        padding: 8px;
+        min-width: 160px;
     }
 
     .dp-info h1 {
@@ -1289,7 +1322,7 @@ footer {
     }
 
     .dp-about {
-        padding: 80px 0;
+        padding: 50px 0;
     }
 
     .dp-about-contant {
@@ -1307,7 +1340,7 @@ footer {
     }
 
     .dp-skill {
-        padding: 80px 0 20px 0;
+        padding: 50px 0 0 0;
     }
 
     .dp-skill-info {
@@ -1330,7 +1363,7 @@ footer {
     }
 
     .dp-work {
-        padding: 80px 0;
+        padding: 60px 0;
     }
 
     .dp-work-name {
@@ -1355,7 +1388,8 @@ footer {
     }
 
     .dp-experiment {
-        padding: 30px 0;
+        padding: 30px 0 0 0;
+        margin: 0 0 30px 0;
     }
 
     .dp-experiment-item {
@@ -1379,16 +1413,28 @@ footer {
             width: 100px;
             height: 100px;
             margin-bottom: 20px;
+            position: relative;
+            text-align: center;
+            margin: 0 auto 20px auto;
+        }
+
+        .dp-testimonial-word {
+            padding-left: 0;
+            text-align: center;
         }
 
         p {
             font-size: 1.5em;
             line-height: 1.4;
-            padding: 50px 0;
+            padding: 40px 0 0 0;
+
+            &::before {
+                right: 0;
+                margin: 0 auto;
+            }
         }
 
         label {
-            padding: 30px 0;
             font-size: 1.5em;
         }
 

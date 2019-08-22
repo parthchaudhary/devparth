@@ -14,11 +14,11 @@
 
 <body>
     <!-- dp-pre-loader -->
-    <div id="loader">
-        <span class="loader-inner">
+    <!-- <div id="dp-loader">
+        <span class="dp-loader-inner">
             <img src="./img/dp-banner-bg.svg" alt="">
         </span>
-    </div>
+    </div> -->
     <!-- dp-navbar -->
     <nav>
         <div class="dp-container">
@@ -97,11 +97,6 @@
         <section id="dp-home" class="dp-home" style="background-image: url(./img/header-bg.jpg)">
             <div id="dp-particles-js"></div>
             <div class="dp-container">
-                <!-- dp-brand -->
-                <div class="dp-brand">
-                    <img src="./img/dp-banner-bg.svg" alt="">
-                </div>
-
                 <!-- dp-home-content -->
                 <div class="dp-home-contant">
                     <div class="profile-pic">
@@ -109,7 +104,7 @@
                     </div>
                     <div class="dp-info">
                         <h1>devParth</h1>
-                        <label>Creative Front-end Desginer</label>
+                        <label><span class="dp-stripe-bg">Creative Front-end Desginer</span></label>
                         <a href="#" class="dp-btn contact-link"><span>About Me</span></a>
                     </div>
                 </div>
@@ -206,7 +201,7 @@
         <!-- dp-work -->
         <section class="dp-work" id="dp-work">
             <div class="dp-container">
-                <h2>Project Works</h2>
+                <h2><span class="dp-stripe-bg">Project Works</span></h2>
                 <ul class="dp-work-details">
                     <li class="dp-work-info">
                         <a href="https://vti.wjr.mybluehost.me/" target="_blank" class="dp-work-link"
@@ -246,7 +241,7 @@
         <!-- dp-experiment -->
         <section class="dp-experiment">
             <div class="dp-container-fluid">
-                <h2>Experiments</h2>
+                <h2><span class="dp-stripe-bg">Experiments</span></h2>
 
                 <!-- dp-experiments-list -->
                 <div class="dp-experiments-list">
@@ -279,7 +274,7 @@
         <!-- dp-testimonials -->
         <section class="dp-testimonials dp-stripe-animate">
             <div class="dp-container">
-                <h2>Testimonials</h2>
+                <h2><span class="dp-stripe-bg">Testimonials</span></h2>
 
                 <div class="dp-testimonials-slider">
                     <div class="dp-slider-item">
@@ -287,12 +282,14 @@
                             <div class="dp-testimonial-pic">
                                 <img src="./img/-man.png" alt="">
                             </div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                                tempore dolores eos vero magnam, et doloribus dolores eos
-                                vero magnam ipsum impedit nisi nam?
-                            </p>
-                            <label>JOHN DOE</label>
+                            <div class="dp-testimonial-word">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                                    tempore dolores eos vero magnam, et doloribus dolores eos
+                                    vero magnam ipsum impedit nisi nam?
+                                </p>
+                                <label>JOHN DOE</label>
+                            </div>
                         </div>
                     </div>
                     <div class="dp-slider-item">
@@ -300,12 +297,14 @@
                             <div class="dp-testimonial-pic">
                                 <img src="./img/-man.png" alt="">
                             </div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                                tempore dolores eos vero magnam, et doloribus dolores eos
-                                vero magnam ipsum impedit nisi nam?
-                            </p>
-                            <label>JOHN DOE</label>
+                            <div class="dp-testimonial-word">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                                    tempore dolores eos vero magnam, et doloribus dolores eos
+                                    vero magnam ipsum impedit nisi nam?
+                                </p>
+                                <label>JOHN DOE</label>
+                            </div>
                         </div>
                     </div>
                     <div class="dp-slider-item">
@@ -313,12 +312,14 @@
                             <div class="dp-testimonial-pic">
                                 <img src="./img/-man.png" alt="">
                             </div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                                tempore dolores eos vero magnam, et doloribus dolores eos
-                                vero magnam ipsum impedit nisi nam?
-                            </p>
-                            <label>JOHN DOE</label>
+                            <div class="dp-testimonial-word">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+                                    tempore dolores eos vero magnam, et doloribus dolores eos
+                                    vero magnam ipsum impedit nisi nam?
+                                </p>
+                                <label>JOHN DOE</label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -392,19 +393,16 @@
             <div class="dp-col-sm-6 dp-col-sm-push-6 dp-form-col">
                 <div class="dp-contact-form" style="background-image: url('./img/close-envelope.png')">
                     <form action="">
-                        <h3>Contact</h3>
+                        <h3><span class="dp-stripe-bg">Contact</span></h3>
                         <label>New project, project inquiry or even coffee.</label>
                         <div class="dp-form-input">
-                            <label>Name*</label>
-                            <input type="text" name="" id="">
+                            <input type="text" name="" id="" placeholder="Name*">
                         </div>
                         <div class="dp-form-input">
-                            <label>Email*</label>
-                            <input type="email" name="" id="">
+                            <input type="email" name="" id="" placeholder="Email*">
                         </div>
                         <div class="dp-form-input">
-                            <label>Message*</label>
-                            <textarea name="" id="" cols="30" rows="5"></textarea>
+                            <textarea name="" id="" cols="30" rows="5" placeholder="Message*"></textarea>
                         </div>
                         <button class="dp-btn">
                             <span>Send</span>
@@ -414,7 +412,7 @@
             </div>
             <div class="dp-col-sm-6 dp-col-sm-pull-6 dp-about-col">
                 <div class="dp-contact-about" style="background-image: url('./img/person-icon.png')">
-                    <h3>About Me</h3>
+                    <h3><span class="dp-stripe-bg">About Me</span></h3>
                     <label>Creative Front-end Desginer</label>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has

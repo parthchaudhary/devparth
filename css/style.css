@@ -1219,9 +1219,11 @@ p {
 }
 
 h2 {
-  font-size: 4.375em;
+  font-size: 2.8125em;
   font-family: "gilroy-Medium";
   margin-bottom: 90px;
+  z-index: 1;
+  position: relative;
 }
 
 .dp-btn {
@@ -1231,15 +1233,15 @@ h2 {
   font-family: "Gilroy-ExtraBold";
   color: #ffffff;
   line-height: 29px;
-  padding: 13px;
-  min-width: 200px;
+  padding: 10px;
+  min-width: 180px;
   text-align: center;
   background: #ef3636;
   background: -webkit-gradient(linear, left top, left bottom, from(#ef3636), to(#f06449));
   background: linear-gradient(180deg, #ef3636 0%, #f06449 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ef3636", endColorstr="#f06449", GradientType=1);
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
   position: relative;
   letter-spacing: 2px;
   cursor: pointer;
@@ -1269,16 +1271,16 @@ h2 {
   height: 100%;
 }
 
-#loader {
+#dp-loader {
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: 1;
-  background: #f2f2f2;
+  background: #1C1D25;
   z-index: 3000;
 }
 
-#loader span {
+#dp-loader span {
   display: block;
   position: absolute;
   top: 50%;
@@ -1290,7 +1292,7 @@ h2 {
           animation: loader 2s infinite ease-in;
 }
 
-#loader span img {
+#dp-loader span img {
   width: 100%;
 }
 
@@ -1383,9 +1385,34 @@ h2 {
   height: auto;
 }
 
-canvas {
-  display: block;
-  vertical-align: bottom;
+.dp-stripe-bg {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  padding: 10px 40px;
+}
+
+.dp-stripe-bg::before, .dp-stripe-bg::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 25px;
+  right: 25px;
+  top: 0px;
+  bottom: 0px;
+  background-color: #26408B;
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.dp-stripe-bg::after {
+  background-color: #EF3636;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  left: 0px;
+  right: 0px;
 }
 
 #dp-particles-js {
@@ -1397,6 +1424,10 @@ canvas {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+}
+
+#dp-particles-js canvas {
+  display: block;
 }
 
 nav {
@@ -1457,7 +1488,7 @@ nav {
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: #E5502B;
+  background-color: #EF3636;
   -webkit-transition: inherit;
   transition: inherit;
 }
@@ -1600,16 +1631,17 @@ nav {
 .dp-home-contant {
   position: absolute;
   top: 40%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  margin: 20px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 20px 0;
+  text-align: center;
 }
 
 .profile-pic {
-  width: 295px;
-  height: 295px;
-  margin: 80px 0 15px 0;
+  width: 250px;
+  height: 250px;
+  margin: 80px auto 15px auto;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -1624,6 +1656,7 @@ nav {
   font-family: "Gilroy-ExtraBold";
   color: #ffffff;
   line-height: 90px;
+  margin-bottom: 20px;
 }
 
 .dp-info label {
@@ -1715,16 +1748,16 @@ nav {
 }
 
 .dp-area-tag a:hover, .dp-area-tag a:focus, .dp-area-tag a:active {
-  color: #E5502B;
+  color: #EF3636;
 }
 
 .dp-area-tag a:hover:after, .dp-area-tag a:hover:before, .dp-area-tag a:focus:after, .dp-area-tag a:focus:before, .dp-area-tag a:active:after, .dp-area-tag a:active:before {
-  background-color: #E5502B;
+  background-color: #EF3636;
 }
 
 .dp-about {
   background: #ffffff;
-  padding: 150px 0;
+  padding: 80px 0;
 }
 
 .dp-about-contant {
@@ -1746,12 +1779,16 @@ nav {
 }
 
 .dp-skill {
-  padding: 150px 0 100px 0;
+  padding: 80px 0 30px 0;
   background: #ef3636;
   background: -webkit-gradient(linear, left top, left bottom, from(#ef3636), to(#f06449));
   background: linear-gradient(180deg, #ef3636 0%, #f06449 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ef3636", endColorstr="#f06449", GradientType=1);
   color: #ffffff;
+}
+
+.dp-skill h2 {
+  margin-bottom: 70px;
 }
 
 .dp-skill-info {
@@ -1790,7 +1827,7 @@ nav {
 }
 
 .dp-work {
-  padding: 150px 0;
+  padding: 80px 0;
 }
 
 .dp-work,
@@ -1812,14 +1849,14 @@ nav {
 }
 
 .dp-work-details .dp-work-info {
-  margin-bottom: 150px;
+  margin-bottom: 100px;
 }
 
 .dp-work-details .dp-work-info .dp-work-link {
   text-decoration: none;
   display: block;
-  min-height: 500px;
-  max-width: 1000px;
+  min-height: 480px;
+  max-width: 930px;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -1905,7 +1942,7 @@ nav {
 }
 
 .dp-work-name h3 {
-  font-size: 4.375em;
+  font-size: 3.125em;
   font-family: "Gilroy-Bold";
   color: inherit;
   margin: 0 0 15px 0;
@@ -1978,27 +2015,11 @@ nav {
 }
 
 .dp-testimonials {
-  padding: 100px 0;
+  padding: 50px 0 80px 0;
   position: relative;
   overflow: hidden;
   -webkit-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
-}
-
-.dp-testimonials::before, .dp-testimonials::after {
-  content: url("../img/stripe-colors.svg");
-  position: absolute;
-  top: 10%;
-  left: -1000px;
-  -webkit-transition: inherit;
-  transition: inherit;
-}
-
-.dp-testimonials::after {
-  top: auto;
-  left: auto;
-  bottom: 10%;
-  right: -1000px;
 }
 
 .dp-testimonials.dp-stripe-animate::before {
@@ -2010,25 +2031,10 @@ nav {
 }
 
 .dp-testimonial-text {
-  max-width: 890px;
+  max-width: 1100px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   position: relative;
-}
-
-.dp-testimonial-text::after {
-  content: "";
-  background: url("../img/quote-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50%;
-  opacity: 0.3;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
 }
 
 .dp-testimonial-text .dp-testimonial-pic {
@@ -2036,7 +2042,9 @@ nav {
   height: 150px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto 40px auto;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .dp-testimonial-text .dp-testimonial-pic img {
@@ -2049,7 +2057,7 @@ nav {
   font-family: "Gilroy-Medium";
   color: #000000;
   position: relative;
-  padding: 70px 0;
+  padding: 55px 0 20px 0;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -2057,34 +2065,27 @@ nav {
   content: url("../img/quote-black.svg");
   position: absolute;
   top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  left: 0%;
 }
 
 .dp-testimonial-text label {
+  display: inline-block;
   position: relative;
   font-size: 2em;
   text-transform: uppercase;
-  font-family: "Gilroy-Bold";
-  padding: 40px 0;
+  font-family: "Gilroy-Regular";
+  background: #1C1D25;
+  color: #ffffff;
+  padding: 4px 8px;
 }
 
-.dp-testimonial-text label::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  min-width: 320px;
-  height: 1px;
-  background: #000000;
+.dp-testimonial-text .dp-testimonial-word {
+  padding-left: 200px;
 }
 
 .dp-testimonials-slider .slick-dots {
   text-align: center;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .dp-testimonials-slider .slick-dots li {
@@ -2116,7 +2117,23 @@ nav {
 
 footer {
   background-color: #1C1D25;
-  padding: 80px 0 0 0;
+  padding: 10px 0 0 0;
+  margin: 50px 0 0 0;
+  position: relative;
+  z-index: 1;
+  overflow: visible visible;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  background-color: #1C1D25;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  -webkit-transform: skewY(2deg);
+          transform: skewY(2deg);
 }
 
 .dp-footer-content {
@@ -2150,7 +2167,7 @@ footer {
 }
 
 .dp-footer-content label a:hover {
-  color: #E5502B;
+  color: #EF3636;
 }
 
 .dp-footer-content .dp-logo {
@@ -2170,7 +2187,7 @@ footer {
 .dp-footer-content .dp-logo a:hover svg path {
   -webkit-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
-  fill: #E5502B;
+  fill: #EF3636;
 }
 
 .dp-footer-links {
@@ -2196,7 +2213,7 @@ footer {
 }
 
 .dp-footer-links li a:hover {
-  color: #E5502B;
+  color: #EF3636;
 }
 
 .dp-footer-links li a:hover i {
@@ -2258,10 +2275,26 @@ footer {
 }
 
 .dp-contact-content h3 {
-  font-size: 2.1875em;
-  font-family: "Gilroy-ExtraBold";
+  font-size: 2em;
+  font-family: "Gilroy-Bold";
   margin-bottom: 15px;
   color: inherit;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 4px;
+}
+
+.dp-contact-content h3 span {
+  padding: 5px 15px;
+}
+
+.dp-contact-content h3 span::before {
+  display: none;
+}
+
+.dp-contact-content h3 span::after {
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
 }
 
 .dp-contact-content label {
@@ -2277,7 +2310,7 @@ footer {
 }
 
 .dp-contact-content p span {
-  color: #E5502B;
+  color: #EF3636;
   font-family: "Gilroy-SemiBold";
 }
 
@@ -2305,12 +2338,6 @@ footer {
   margin-bottom: 25px;
 }
 
-.dp-form-input label {
-  font-size: 0.875em;
-  font-family: "Gilroy-SemiBold";
-  margin: 0;
-}
-
 .dp-form-input input,
 .dp-form-input textarea {
   display: block;
@@ -2318,22 +2345,24 @@ footer {
   border: 0;
   border-bottom: 2px solid #ffffff;
   background-color: rgba(0, 0, 0, 0);
-  padding: 5px 0;
-  color: #ffffff;
-  font-family: "Gilroy-Regular";
+  padding: 10px;
+  font-family: "Gilroy-Medium";
   font-size: 1.125em;
   resize: none;
+  background-color: #ffffff;
+  font-style: italic;
+  color: #1C1D25;
 }
 
 .dp-form-input input:hover, .dp-form-input input:focus, .dp-form-input input:active,
 .dp-form-input textarea:hover,
 .dp-form-input textarea:focus,
 .dp-form-input textarea:active {
-  border-color: #E5502B;
+  border-color: #EF3636;
 }
 
 .dp-form-input input {
-  height: 40px;
+  height: 45px;
 }
 
 .dp-contact-open {
@@ -2350,6 +2379,9 @@ footer {
   h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
+  }
+  .dp-stripe-bg {
+    padding: 5px 30px;
   }
   .dp-navbar {
     margin: 0;
@@ -2371,16 +2403,16 @@ footer {
     font-size: 3.25em;
   }
   .dp-about {
-    padding: 100px 0;
+    padding: 70px 0;
   }
   .dp-skill {
-    padding: 100px 0 50px 0;
+    padding: 70px 0 50px 0;
   }
   .dp-work {
-    padding: 100px 0;
+    padding: 70px 0;
   }
   .dp-testimonials {
-    padding: 80px 0;
+    padding: 70px 0;
   }
   .dp-work-details .dp-work-info {
     margin-bottom: 100px;
@@ -2402,9 +2434,6 @@ footer {
   .dp-testimonials-slider .slick-dots {
     margin-top: 40px;
   }
-  footer {
-    padding: 50px 0 0 0;
-  }
   .dp-footer-content {
     margin-top: 100px;
   }
@@ -2421,9 +2450,12 @@ footer {
 }
 
 @media (max-width: 767px) {
+  h2 {
+    font-size: 1.625em;
+  }
   .dp-btn {
-    padding: 10px;
-    min-width: 200px;
+    padding: 8px;
+    min-width: 160px;
   }
   .dp-info h1 {
     line-height: 60px;
@@ -2510,7 +2542,7 @@ footer {
     display: none;
   }
   .dp-about {
-    padding: 80px 0;
+    padding: 50px 0;
   }
   .dp-about-contant label {
     font-size: 1.25em;
@@ -2522,7 +2554,7 @@ footer {
     margin-bottom: 30px;
   }
   .dp-skill {
-    padding: 80px 0 20px 0;
+    padding: 50px 0 0 0;
   }
   .dp-skill-info {
     max-width: 100%;
@@ -2540,7 +2572,7 @@ footer {
     padding: 0;
   }
   .dp-work {
-    padding: 80px 0;
+    padding: 60px 0;
   }
   .dp-work-name {
     position: absolute;
@@ -2558,7 +2590,8 @@ footer {
     background: #1c1d25 !important;
   }
   .dp-experiment {
-    padding: 30px 0;
+    padding: 30px 0 0 0;
+    margin: 0 0 30px 0;
   }
   .dp-experiment-item {
     padding: 20px 15px;
@@ -2576,14 +2609,24 @@ footer {
     width: 100px;
     height: 100px;
     margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    margin: 0 auto 20px auto;
+  }
+  .dp-testimonial-text .dp-testimonial-word {
+    padding-left: 0;
+    text-align: center;
   }
   .dp-testimonial-text p {
     font-size: 1.5em;
     line-height: 1.4;
-    padding: 50px 0;
+    padding: 40px 0 0 0;
+  }
+  .dp-testimonial-text p::before {
+    right: 0;
+    margin: 0 auto;
   }
   .dp-testimonial-text label {
-    padding: 30px 0;
     font-size: 1.5em;
   }
   .dp-testimonial-text .dp-testimonials-slider .slick-dots {

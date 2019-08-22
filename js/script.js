@@ -21,7 +21,7 @@ $(document).ready(function () {
     $(".dp-testimonials-slider").slick({
         arrows: false,
         dots: true,
-        autoplay: true
+        // autoplay: true
     });
 
     // On before slide change
@@ -72,7 +72,7 @@ $(window).load(function () {
     equalheight('.dp-experiment-item');
 
     // dp-pre-loader
-    $("#loader").delay(1500).fadeOut("slow");
+    $("#dp-loader").delay(1100).slideUp('left');
 });
 
 
