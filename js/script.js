@@ -12,9 +12,17 @@ $(document).ready(function () {
         e.preventDefault();
         $("body").addClass("dp-contact-open");
     });
+    $(".about-link").click(function (e) {
+        e.preventDefault();
+        $("body").addClass("dp-about-more-open");
+    });
     $(".dp-contact-close").click(function (e) {
         e.preventDefault();
         $("body").removeClass("dp-contact-open");
+    });
+    $(".dp-about-more-close").click(function (e) {
+        e.preventDefault();
+        $("body").removeClass("dp-about-more-open");
     });
 
     // testimonial slider
@@ -31,6 +39,46 @@ $(document).ready(function () {
 
     $('.dp-testimonials-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
         $(".dp-testimonials").addClass("dp-stripe-animate");
+    });
+
+    // dp-tabination
+    var tabVal;
+    var contentVal;
+
+    $(".tab-link").click(function () {
+        console.log('click');
+        tabVal = $(this).attr('data-tab');
+        contentVal = '#' + tabVal;
+        console.log(tabVal);
+        console.log(tabVal);
+        $(".tab-link").removeClass('active-tab');
+        $(this).addClass('active-tab');
+        $(".tab-content").removeClass("active-content");
+        $(contentVal).addClass("active-content")
+    });
+
+    var c, currentScrollTop = 0,
+        navbar = $('nav');
+
+    $(window).scroll(function () {
+        var a = $(window).scrollTop();
+        var scroll = $(window).scrollTop();
+        var b = navbar.height();
+
+        currentScrollTop = a;
+
+        if (c < currentScrollTop && a > b + b) {
+            navbar.removeClass("dp-darkHeader");
+        } else if (c > currentScrollTop && !(a <= b)) {
+            navbar.addClass("dp-darkHeader");
+        }
+        c = currentScrollTop;
+
+        if (scroll <= 100) {
+            $("nav").removeClass("dp-darkHeader");
+            console.log('yes');
+
+        }
     });
 });
 
@@ -97,15 +145,16 @@ $(document).ready(function () {
 });
 
 // header class on scroll
-$(window).scroll(function () {
-    var scroll = $(window).scrollTop();
+// $(window).scroll(function () {
+//     var scroll = $(window).scrollTop();
 
-    if (scroll >= 20) {
-        $("nav").addClass("dp-darkHeader");
-    } else {
-        $("nav").removeClass("dp-darkHeader");
-    }
-});
+//     if (scroll >= 20) {
+//         $("nav").addClass("dp-darkHeader");
+//     } else {
+//         $("nav").removeClass("dp-darkHeader");
+//     }
+// });
+
 
 // dp-particle-js
 /* ---- particles.js config ---- */
