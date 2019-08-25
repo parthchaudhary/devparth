@@ -1977,6 +1977,20 @@ footer {
         }
     }
 
+    .dp-about-more-close {
+        &::before {
+            background: $dark !important;
+        }
+
+        span {
+
+            &::before,
+            &::after {
+                background-color: $white !important;
+            }
+        }
+    }
+
 }
 
 // min-width media

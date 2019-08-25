@@ -3113,6 +3113,12 @@ footer::before {
     width: 60px;
     margin: 0 auto;
   }
+  .dp-about-more-close::before {
+    background: #1C1D25 !important;
+  }
+  .dp-about-more-close span::before, .dp-about-more-close span::after {
+    background-color: #ffffff !important;
+  }
 }
 
 @media (min-width: 768px) {
