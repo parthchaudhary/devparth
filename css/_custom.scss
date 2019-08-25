@@ -35,7 +35,7 @@ h2 {
     text-decoration: none;
     display: inline-block;
     font-size: em(22);
-    font-family: "Gilroy-ExtraBold";
+    font-family: "Gilroy-Bold";
     color: $white;
     line-height: 29px;
     padding: 10px;
@@ -45,7 +45,7 @@ h2 {
     @include primary-gradient;
     transition: all ease-in-out 0.2s;
     position: relative;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     cursor: pointer;
 
     span {
@@ -145,7 +145,6 @@ h2 {
 
 .dp-darkHeader {
     background-color: $dark;
-    border-bottom: 2px solid #f2f2f2;
     padding: 5px 0;
     height: auto;
     position: fixed;
@@ -1099,6 +1098,7 @@ footer {
         padding: 10px;
         min-width: 150px;
         margin-top: 25px;
+        border: 0;
     }
 }
 
@@ -1652,7 +1652,7 @@ footer {
 @media(max-width: $sm) {
 
     h2 {
-        font-size: em(26);
+        font-size: em(29);
     }
 
     .dp-btn {
@@ -1665,9 +1665,10 @@ footer {
         margin-bottom: 30px;
     }
 
-    nav {
-        height: 55px;
-        padding: 5px 0;
+    nav,
+    .dp-darkHeader {
+        height: 45px;
+        padding: 0;
     }
 
     .dp-navigation {
@@ -1773,16 +1774,25 @@ footer {
     }
 
     .dp-skill {
-        padding: 50px 0 0 0;
+        padding: 50px 0 10px 0;
+
+        h2 {
+            margin-bottom: 35px;
+        }
     }
 
     .dp-skill-info {
         max-width: 100%;
+        margin-bottom: 40px;
 
         label {
-            font-size: 1.3em;
+            font-size: 1.2em;
             line-height: 25px;
             margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1em;
         }
 
         .dp-skill-icon {
@@ -1793,6 +1803,10 @@ footer {
 
     .dp-work-details {
         padding: 0;
+
+        .dp-work-info {
+            margin-bottom: 50px;
+        }
     }
 
     .dp-work {
@@ -1805,7 +1819,11 @@ footer {
         left: 30px;
 
         h3 {
-            font-size: 2.3em;
+            font-size: 2em;
+        }
+
+        .dp-btn {
+            display: none;
         }
     }
 
@@ -1822,7 +1840,6 @@ footer {
 
     .dp-experiment {
         padding: 30px 0 0 0;
-        margin: 0 0 30px 0;
     }
 
     .dp-experiment-item {
@@ -1877,10 +1894,16 @@ footer {
     }
 
     .dp-footer-content {
-        margin-top: 80px;
+        margin-top: 50px;
 
         h2 {
-            font-size: 2.5em;
+            font-size: 2.1em;
+        }
+
+        label {
+            a {
+                font-size: 1.1em;
+            }
         }
     }
 

@@ -7,18 +7,20 @@ $(document).ready(function () {
         $(".dp-navigation").removeClass("dp-navigation-open");
     });
 
-    // contact form
+    // contact form model
     $(".contact-link").click(function (e) {
         e.preventDefault();
         $("body").addClass("dp-contact-open");
     });
-    $(".about-link").click(function (e) {
-        e.preventDefault();
-        $("body").addClass("dp-about-more-open");
-    });
     $(".dp-contact-close").click(function (e) {
         e.preventDefault();
         $("body").removeClass("dp-contact-open");
+    });
+
+    // About detail form model
+    $(".about-link").click(function (e) {
+        e.preventDefault();
+        $("body").addClass("dp-about-more-open");
     });
     $(".dp-about-more-close").click(function (e) {
         e.preventDefault();
@@ -29,7 +31,7 @@ $(document).ready(function () {
     $(".dp-testimonials-slider").slick({
         arrows: false,
         dots: true,
-        // autoplay: true
+        autoplay: true
     });
 
     // On before slide change
@@ -80,6 +82,9 @@ $(document).ready(function () {
 
         }
     });
+
+    // equal height
+    equalheight('.dp-experiment-item');
 });
 
 
@@ -120,7 +125,7 @@ $(window).load(function () {
     equalheight('.dp-experiment-item');
 
     // dp-pre-loader
-    $("#dp-loader").delay(1100).slideUp('left');
+    $("#dp-loader").delay(1100).slideUp();
 });
 
 

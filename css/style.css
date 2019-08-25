@@ -1234,7 +1234,7 @@ h2 {
   text-decoration: none;
   display: inline-block;
   font-size: 1.375em;
-  font-family: "Gilroy-ExtraBold";
+  font-family: "Gilroy-Bold";
   color: #ffffff;
   line-height: 29px;
   padding: 10px;
@@ -1247,7 +1247,7 @@ h2 {
   -webkit-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
   position: relative;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   cursor: pointer;
 }
 
@@ -1384,7 +1384,6 @@ h2 {
 
 .dp-darkHeader {
   background-color: #1C1D25;
-  border-bottom: 2px solid #f2f2f2;
   padding: 5px 0;
   height: auto;
   position: fixed;
@@ -2370,6 +2369,7 @@ footer::before {
   padding: 10px;
   min-width: 150px;
   margin-top: 25px;
+  border: 0;
 }
 
 .dp-contact-form,
@@ -2857,7 +2857,7 @@ footer::before {
 
 @media (max-width: 767px) {
   h2 {
-    font-size: 1.625em;
+    font-size: 1.8125em;
   }
   .dp-btn {
     padding: 8px;
@@ -2867,9 +2867,10 @@ footer::before {
     line-height: 60px;
     margin-bottom: 30px;
   }
-  nav {
-    height: 55px;
-    padding: 5px 0;
+  nav,
+  .dp-darkHeader {
+    height: 45px;
+    padding: 0;
   }
   .dp-navigation {
     position: fixed;
@@ -2960,15 +2961,22 @@ footer::before {
     margin-bottom: 30px;
   }
   .dp-skill {
-    padding: 50px 0 0 0;
+    padding: 50px 0 10px 0;
+  }
+  .dp-skill h2 {
+    margin-bottom: 35px;
   }
   .dp-skill-info {
     max-width: 100%;
+    margin-bottom: 40px;
   }
   .dp-skill-info label {
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 25px;
     margin-bottom: 15px;
+  }
+  .dp-skill-info p {
+    font-size: 1.1em;
   }
   .dp-skill-info .dp-skill-icon {
     width: 120px;
@@ -2976,6 +2984,9 @@ footer::before {
   }
   .dp-work-details {
     padding: 0;
+  }
+  .dp-work-details .dp-work-info {
+    margin-bottom: 50px;
   }
   .dp-work {
     padding: 60px 0;
@@ -2986,7 +2997,10 @@ footer::before {
     left: 30px;
   }
   .dp-work-name h3 {
-    font-size: 2.3em;
+    font-size: 2em;
+  }
+  .dp-work-name .dp-btn {
+    display: none;
   }
   .dp-work-link::before {
     display: none;
@@ -2997,7 +3011,6 @@ footer::before {
   }
   .dp-experiment {
     padding: 30px 0 0 0;
-    margin: 0 0 30px 0;
   }
   .dp-experiment-item {
     padding: 20px 15px;
@@ -3039,10 +3052,13 @@ footer::before {
     margin-top: 30px;
   }
   .dp-footer-content {
-    margin-top: 80px;
+    margin-top: 50px;
   }
   .dp-footer-content h2 {
-    font-size: 2.5em;
+    font-size: 2.1em;
+  }
+  .dp-footer-content label a {
+    font-size: 1.1em;
   }
   .dp-footer-links {
     padding: 20px 0;
