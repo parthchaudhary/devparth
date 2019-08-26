@@ -1,2 +1,6 @@
+# Compiled source #
+###################
 *.scss
 *.map
+/css/*.scss
+/css/*.map

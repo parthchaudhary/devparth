@@ -2043,6 +2043,8 @@ nav {
 .dp-experiment-item figure img {
   width: 100%;
   height: auto;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .dp-experiment-item label {
