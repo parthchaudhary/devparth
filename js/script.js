@@ -123,9 +123,6 @@ equalheight = function (container) {
 $(window).load(function () {
     // equal height
     equalheight('.dp-experiment-item');
-
-    // dp-pre-loader
-    $("#dp-loader").delay(1100).slideUp();
 });
 
 
@@ -149,20 +146,7 @@ $(document).ready(function () {
     });
 });
 
-// header class on scroll
-// $(window).scroll(function () {
-//     var scroll = $(window).scrollTop();
-
-//     if (scroll >= 20) {
-//         $("nav").addClass("dp-darkHeader");
-//     } else {
-//         $("nav").removeClass("dp-darkHeader");
-//     }
-// });
-
-
 // dp-particle-js
-/* ---- particles.js config ---- */
 particlesJS("dp-particles-js", {
     "particles": {
         "number": {
