@@ -48,15 +48,12 @@ $(document).ready(function () {
     var contentVal;
 
     $(".tab-link").click(function () {
-        console.log('click');
         tabVal = $(this).attr('data-tab');
         contentVal = '#' + tabVal;
-        console.log(tabVal);
-        console.log(tabVal);
         $(".tab-link").removeClass('active-tab');
         $(this).addClass('active-tab');
         $(".tab-content").removeClass("active-content");
-        $(contentVal).addClass("active-content")
+        $(contentVal).addClass("active-content");
     });
 
     var c, currentScrollTop = 0,
