@@ -4648,6 +4648,7 @@ nav {
   font-weight: 400;
   margin-bottom: 40px;
   font-style: italic;
+  letter-spacing: 1px;
 }
 
 .dp-social-desktop {
@@ -5733,8 +5734,8 @@ footer::before {
   .dp-info h1 {
     font-size: 3.25em;
   }
-  .dp-info label {
-    font-weight: 600;
+  .dp-info .dp-stripe-bg {
+    padding: 10px 20px;
   }
   .dp-about {
     padding: 70px 0;
@@ -5805,7 +5806,7 @@ footer::before {
     font-size: 1.8125em;
   }
   .dp-btn {
-    padding: 8px;
+    padding: 10px;
     min-width: 160px;
   }
   .dp-info h1 {
