@@ -4163,7 +4163,7 @@ h2 {
   padding: 12px 25px;
   min-width: 180px;
   text-align: center;
-  background: #EF3636;
+  background: #235AA6;
   -webkit-transition: all ease-in-out 0.2s;
   transition: all ease-in-out 0.2s;
   position: relative;
@@ -4187,10 +4187,7 @@ h2 {
   height: 0%;
   -webkit-transition: inherit;
   transition: inherit;
-  background: #26408b;
-  background: -webkit-gradient(linear, left top, left bottom, from(#26408b), to(#235aa6));
-  background: linear-gradient(180deg, #26408b 0%, #235aa6 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#26408b", endColorstr="#235aa6", GradientType=1);
+  background: #EF3636;
 }
 
 .dp-btn:hover::after, .dp-btn:focus::after, .dp-btn:active::after {
@@ -4760,7 +4757,19 @@ nav {
   font-size: 2.1875em;
   font-family: "Gilroy-SemiBold";
   line-height: 50px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
+}
+
+.dp-about-contant .dp-btn {
+  margin-right: 10px;
+}
+
+.dp-about-contant .dp-btn:not(.contact-link) {
+  background: #EF3636;
+}
+
+.dp-about-contant .dp-btn:not(.contact-link):hover:after, .dp-about-contant .dp-btn:not(.contact-link):focus:after, .dp-about-contant .dp-btn:not(.contact-link):active:after {
+  background: #235AA6;
 }
 
 .dp-skill {
@@ -5723,6 +5732,9 @@ footer::before {
   }
   .dp-info h1 {
     font-size: 3.25em;
+  }
+  .dp-info label {
+    font-weight: 600;
   }
   .dp-about {
     padding: 70px 0;

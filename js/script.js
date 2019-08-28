@@ -6,7 +6,6 @@ $(document).ready(function () {
     $(".dp-nav-toggle-close, .dp-nav-links a").click(function () {
         $(".dp-navigation").removeClass("dp-navigation-open");
     });
-
     // contact form model
     $(".contact-link").click(function (e) {
         e.preventDefault();
@@ -16,7 +15,6 @@ $(document).ready(function () {
         e.preventDefault();
         $("body").removeClass("dp-contact-open");
     });
-
     // About detail form model
     $(".about-link").click(function (e) {
         e.preventDefault();
@@ -33,20 +31,9 @@ $(document).ready(function () {
         dots: true,
         autoplay: true
     });
-
-    // On before slide change
-    $('.dp-testimonials-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        $(".dp-testimonials").removeClass("dp-stripe-animate");
-    });
-
-    $('.dp-testimonials-slider').on('afterChange', function (event, slick, currentSlide, nextSlide) {
-        $(".dp-testimonials").addClass("dp-stripe-animate");
-    });
-
     // dp-tabination
     var tabVal;
     var contentVal;
-
     $(".tab-link").click(function () {
         tabVal = $(this).attr('data-tab');
         contentVal = '#' + tabVal;
@@ -55,36 +42,26 @@ $(document).ready(function () {
         $(".tab-content").removeClass("active-content");
         $(contentVal).addClass("active-content");
     });
-
     var c, currentScrollTop = 0,
         navbar = $('nav');
-
     $(window).scroll(function () {
         var a = $(window).scrollTop();
         var scroll = $(window).scrollTop();
         var b = navbar.height();
-
         currentScrollTop = a;
-
         if (c < currentScrollTop && a > b + b) {
             navbar.removeClass("dp-darkHeader");
         } else if (c > currentScrollTop && !(a <= b)) {
             navbar.addClass("dp-darkHeader");
         }
         c = currentScrollTop;
-
         if (scroll <= 100) {
             $("nav").removeClass("dp-darkHeader");
-            console.log('yes');
-
         }
     });
-
     // equal height
     equalheight('.dp-experiment-item');
 });
-
-
 // equal height js 
 equalheight = function (container) {
 
@@ -116,17 +93,13 @@ equalheight = function (container) {
         }
     });
 }
-
 $(window).load(function () {
     // equal height
     equalheight('.dp-experiment-item');
 });
-
-
 $(window).resize(function () {
     equalheight('.dp-experiment-item');
 });
-
 // smooth scroll
 $(document).ready(function () {
     // Add smooth scrolling to all links
@@ -142,7 +115,6 @@ $(document).ready(function () {
         }
     });
 });
-
 // dp-particle-js
 particlesJS("dp-particles-js", {
     "particles": {
