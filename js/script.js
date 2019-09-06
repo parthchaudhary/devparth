@@ -29,7 +29,10 @@ $(document).ready(function () {
     $(".dp-testimonials-slider").slick({
         arrows: false,
         dots: true,
-        autoplay: true
+        autoplay: true,
+        autoplaySpeed: 5000,
+        adaptiveHeight: true,
+        speed: 1000,
     });
     // dp-tabination
     var tabVal;
