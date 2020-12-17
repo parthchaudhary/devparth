@@ -1,0 +1,62 @@
+{
+	"project_1": {
+        "name": "Jinju Chocolates",
+        "catagory": "Shopify",
+        "imgUrl": "https://i.pinimg.com/originals/28/e6/45/28e64574982954e7e463e74bc198165d.jpg",
+        "url":"https://www.jinjuchocolates.com/"
+    },
+    "project_2": {
+        "name": "Terrida Shopping Website",
+        "catagory": "Sketch To HTML",
+        "imgUrl": "https://i.pinimg.com/originals/a4/88/c5/a488c5ca473f7a96db211d0c36d76699.jpg",
+        "url":"https://parthchaudhary.github.io/terrida/"
+    },
+    "project_3": {
+        "name": "Shraddha Infotech",
+        "catagory": "UI/UX, HTML Development",
+        "imgUrl": "https://i.pinimg.com/originals/5d/29/0b/5d290b2132b8a43f4ad202f9729c8131.jpg",
+        "url":"https://parthchaudhary.github.io/Shradha-Infosoft/"
+    },
+    "project_4": {
+        "name": "Paramount Shopify",
+        "catagory": "Shopify",
+        "imgUrl": "https://i.pinimg.com/originals/df/11/ec/df11ec99885dfda1fb6c25fde56c4f9c.jpg",
+        "url":"https://www.paramountwines.co.uk/"
+    },
+    "project_5": {
+        "name": "Noval3d",
+        "catagory": "Sketch To HTML",
+        "imgUrl": "https://i.pinimg.com/originals/75/32/d4/7532d42e15ad99ad1125dd213a68d481.jpg",
+        "url":"https://parthchaudhary.github.io/noval3d/"
+    },
+    "project_6": {
+        "name": "MHC",
+        "catagory": "Sketch To HTML",
+        "imgUrl": "https://i.pinimg.com/originals/07/dc/f4/07dcf483ee09750a112e39da38ce5e69.jpg",
+        "url":"https://www.devparth.com"
+    },
+    "project_7": {
+        "name": "IQOS",
+        "catagory": "Sketch To HTML",
+        "imgUrl": "https://i.pinimg.com/originals/42/ec/ae/42ecaed995696464aab55a7d934b0d1e.jpg",
+        "url":"https://www.iqos.com/"
+    },
+    "project_8": {
+        "name": "Kickpages",
+        "catagory": "Sketch To HTML",
+        "imgUrl": "https://i.pinimg.com/originals/ef/8e/58/ef8e58d3b7f1270797174654b0955ab3.jpg",
+        "url":"https://www.kickpages.com/"
+    },
+    "project_9": {
+        "name": "Aayan Solution",
+        "catagory": "PSD To Wordpress",
+        "imgUrl": "./img/aayan-solution.jpg",
+        "url":"https://vti.wjr.mybluehost.me/"
+    },
+    "project_10": {
+        "name": "Portfolio UI/UX Design",
+        "catagory": "UI/UX Design",
+        "imgUrl": "./img/portfolio-proj.jpg",
+        "url":"https://www.behance.net/gallery/82004427/single-page-portfolio"
+    }
+}
