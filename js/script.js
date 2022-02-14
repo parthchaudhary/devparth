@@ -6,6 +6,11 @@ $(document).ready(function () {
     $(".dp-nav-toggle-close, .dp-nav-links a").click(function () {
         $(".dp-navigation").removeClass("dp-navigation-open");
     });
+    // Open contac modal after 10 sec
+    setTimeout(() => {
+        $("body").addClass("dp-contact-open");
+    }, 10000);
+    
     // contact form model
     $(".contact-link").click(function (e) {
         e.preventDefault();
